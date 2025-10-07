@@ -10,7 +10,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
+    "build": "node buildpackage.js"
   },
   "keywords": [
     "extensions",
