@@ -296,7 +296,7 @@ export function init(options?: IExtensionInitOptions): Promise<void> {
         const initOptions = { ...options, sdkVersion };
 
         parentChannel.invokeRemoteMethod<IExtensionHandshakeResult | ILegacyExtensionHandshakeResult>("initialHandshake", hostControlId, [initOptions]).then((handshakeData) => {
-
+            console.log("Handshake complete", handshakeData);
             if ('context' in handshakeData) {
                 const data = handshakeData as IExtensionHandshakeResult;
                 const context = data.context;
